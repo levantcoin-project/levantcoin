@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  levantcoind The Levantcoin core server.
+#
+#
+# chkconfig: 345 80 20
+# description: levantcoind
+# processname: levantcoind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/levantcoind, see below
+if [ -f /etc/sysconfig/levantcoind ]; then
+        . /etc/sysconfig/levantcoind
+fi
+
+RETVAL=0
+
+prog=levantcoind
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/levantcoind
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/levantcoind}
+
+# levantcoind defaults to /usr/bin/levantcoind, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/levantcoind}
+
+# levantcoind opts default to -disablewallet, override with BITCOIND_OPTS
+bitcoind_opts=${BITCOIND_OPTS}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $bitcoind $bitcoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

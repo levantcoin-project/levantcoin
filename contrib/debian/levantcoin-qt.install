@@ -1,0 +1,6 @@
+usr/local/bin/levantcoin-qt usr/bin
+share/pixmaps/levantcoin32.xpm usr/share/pixmaps
+share/pixmaps/levantcoin16.xpm usr/share/pixmaps
+share/pixmaps/levantcoin128.png usr/share/pixmaps
+debian/levantcoin-qt.desktop usr/share/applications
+debian/levantcoin-qt.protocol usr/share/kde4/services/

@@ -1,0 +1,3 @@
+usr/local/bin/levantcoind usr/bin
+usr/local/bin/levantcoin-cli usr/bin
+debian/examples/levantcoin.conf etc/levantcoin

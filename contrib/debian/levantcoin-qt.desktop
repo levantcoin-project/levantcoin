@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Levantcoin Core
+Comment=Levantcoin P2P Cryptocurrency
+Comment[fr]=Levantcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Levantcoin, eşten eşe kriptografik sanal para birimi
+Exec=levantcoin-qt %u
+Terminal=false
+Type=Application
+Icon=levantcoin128
+MimeType=x-scheme-handler/levantcoin;
+Categories=Office;Finance;
+StartupWMClass=Levantcoin-qt

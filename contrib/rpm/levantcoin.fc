@@ -1,0 +1,8 @@
+/usr/bin/levantcoin-cli		--	gen_context(system_u:object_r:levantcoin_exec_t,s0)
+/usr/sbin/levantcoind		--	gen_context(system_u:object_r:levantcoin_exec_t,s0)
+/usr/lib(64)?/levantcoin/levantcoind		--	gen_context(system_u:object_r:levantcoin_exec_t,s0)
+
+/etc/levantcoin(/.*)?		gen_context(system_u:object_r:levantcoin_conf_t,s0)
+/var/lib/levantcoin(/.*)?		gen_context(system_u:object_r:levantcoin_var_lib_t,s0)
+
+(/var)?/run/levantcoind(/.*)?   gen_context(system_u:object_r:levantcoin_var_run_t,s0)
