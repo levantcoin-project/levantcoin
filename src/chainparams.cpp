@@ -186,6 +186,11 @@ public:
 
         vSeeds.push_back(CDNSSeedData("levantcoin.com", "node.levantcoin.com"));
         vSeeds.push_back(CDNSSeedData("levantcoin.org", "node.levantcoin.org"));
+        vSeeds.push_back(CDNSSeedData("levantcoin.tk", "node.levantcoin.tk"));
+        vSeeds.push_back(CDNSSeedData("levantcoin.ml", "node.levantcoin.ml"));
+        vSeeds.push_back(CDNSSeedData("levantcoin.ga", "node.levantcoin.ga"));
+        vSeeds.push_back(CDNSSeedData("levantcoin.cf", "node.levantcoin.cf"));
+        vSeeds.push_back(CDNSSeedData("levantcoin.gq", "node.levantcoin.gq"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 48);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 49);
