@@ -1,4 +1,4 @@
-Levantcoin 
+Levantcoin forked from PIVX
 =====================================
 
 Levantcoin is an open source crypto-currency focused on fast private transactions using the Zerocoin protocol, with low transaction fees & environmental footprint.  It utilizes the first ever anonymous proof of stake protocol, called zPoS, combined with regular PoS and masternodes for securing its network. zPoS incentivises using the privacy features available in Levantcoin by granting a higher block reward for zPoS over regular PoS and masternodes. In practice Levantcoin has between 4 to 10 times higher use of it's privacy features in comparison to other coins that combine public and private transactions. This is thanks to innovations like zPoS and integrating the Zerocoin protocol into light/mobile wallets, allowing for a complete and lightweight privacy protocol that can be used on the go. As well as security improvements like deterministic generation of zPIV for easy backups.
